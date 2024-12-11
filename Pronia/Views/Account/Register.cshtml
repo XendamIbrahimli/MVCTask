@@ -1,0 +1,81 @@
+﻿@using Pronia.ViewModel.Auths
+@model RegisterCreateVM
+@{
+    ViewData["Title"] = "Register";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+
+        <!-- Begin Main Header Area -->
+        
+        <!-- Main Header Area End Here -->
+        <!-- Begin Main Content Area -->
+        <main class="main-content">
+            <div class="breadcrumb-area breadcrumb-height"
+                 data-bg-image="assets/images/breadcrumb/bg/1-1-1919x388.jpg">
+                <div class="container h-100">
+                    <div class="row h-100">
+                        <div class="col-lg-12">
+                            <div class="breadcrumb-item">
+                                <h2 class="breadcrumb-heading">Register Page</h2>
+                                <ul>
+                                    <li>
+                                        <a href="index.html">Home</a>
+                                    </li>
+                                    <li>Login | Register</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="login-register-area section-space-y-axis-100">
+                <div class="container">
+                        <div class="col-lg-6 pt-5 pt-lg-0">
+                            <form method="post">
+                                <div class="login-form">
+                                    <h4 class="login-title">Register</h4>
+                                    <div class="row">
+                                        <div class="col-md-6 col-12">
+                                            <label asp-for="Fullname"></label>
+                                            <input asp-for="Fullname" placeholder="Fullname" />
+                                            <span class="text-danger" asp-validation-for="Fullname"></span>
+                                        </div>
+                                        <div class="col-md-6 col-12">
+                                            <label asp-for="Username"></label>
+                                            <input asp-for="Username" placeholder="Username" />
+                                            <span class="text-danger" asp-validation-for="Username"></span>
+                                        </div>
+                                        <div class="col-md-12">
+                                            <label asp-for="Email"></label>
+                                            <input asp-for="Email" placeholder="Email" />
+                                            <span class="text-danger" asp-validation-for="Email"></span>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label asp-for="Password"></label>
+                                            <input asp-for="Password" placeholder="Password" />
+                                            <span class="text-danger" asp-validation-for="Password"></span>
+                                        </div>
+                                        <div class="col-md-6">
+                                           <label asp-for="RePassword"></label>
+                                            <input asp-for="RePassword" placeholder="Confirm Password" />
+                                            <span class="text-danger" asp-validation-for="RePassword"></span>
+                                        </div>
+                                        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                                        <div class="col-12">
+                                            <button class="btn btn-custom-size lg-size btn-pronia-primary">
+                                                Register
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <!-- Main Content Area End Here -->
+     
+
